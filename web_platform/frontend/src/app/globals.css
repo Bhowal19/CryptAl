@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Exact Hex Values */
+  --hex-white: #ffffff;
+  --hex-black: #000000;
+
+  --hex-light-bg: #f8fafc;
+  --hex-light-surface: #ffffff;
+  --hex-light-border: #e2e8f0;
+  --hex-light-text-pri: #0f172a;
+  --hex-light-text-sec: #64748b;
+
+  --hex-dark-bg: #0b0f19;
+  --hex-dark-surface: #1e293b;
+  --hex-dark-border: #334155;
+  --hex-dark-text-pri: #f8fafc;
+  --hex-dark-text-sec: #94a3b8;
+
+  --hex-accent-blue: #0ea5e9;
+
+  /* Semantic Theme Tokens (Light Default) */
+  --color-background-primary: var(--hex-light-bg);
+  --color-background-secondary: var(--hex-light-surface);
+  --color-text-primary: var(--hex-light-text-pri);
+  --color-text-secondary: var(--hex-light-text-sec);
+  --color-text-inverse: var(--hex-white);
+  --color-accent: var(--hex-accent-blue);
+  --color-border: var(--hex-light-border);
+
+  /* Default Typography Scale (Mobile) */
+  --text-h1: 3rem;
+  --text-h1-lh: 1.1;
+  --text-h2: 2.75rem;
+  --text-h2-lh: 1.2;
+  --text-h3: 2rem;
+  --text-h3-lh: 1.2;
+  --text-h4: 1.5rem;
+  --text-h4-lh: 1.3;
+  --text-h5: 1.25rem;
+  --text-h5-lh: 1.3;
+  --text-h6: 1.125rem;
+  --text-h6-lh: 1.4;
+
+  --text-tagline: 1rem;
+  --text-tagline-lh: 1.5;
+  --text-large: 1.625rem;
+  --text-large-lh: 1.5;
+  --text-medium: 1.25rem;
+  --text-medium-lh: 1.5;
+  --text-regular: 1.125rem;
+  --text-regular-lh: 1.5;
+  --text-small: 1rem;
+  --text-small-lh: 1.5;
+  --text-tiny: 0.75rem;
+  --text-tiny-lh: 1.5;
+}
+
+.dark {
+  /* Semantic Theme Tokens (Dark) */
+  --color-background-primary: var(--hex-dark-bg);
+  --color-background-secondary: var(--hex-dark-surface);
+  --color-text-primary: var(--hex-dark-text-pri);
+  --color-text-secondary: var(--hex-dark-text-sec);
+  --color-text-inverse: var(--hex-white);
+  --color-accent: var(--hex-accent-blue);
+  --color-border: var(--hex-dark-border);
+}
+
+@media (min-width: 64rem)
+/* desktop */
+  {
+  :root {
+    /* Base Typography Scale (Desktop) */
+    --text-h1: 5.25rem;
+    --text-h2: 3.75rem;
+    --text-h3: 3rem;
+    --text-h4: 2.5rem;
+    --text-h5: 2rem;
+    --text-h6: 1.625rem;
+  }
+}
+
+@theme inline {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Custom Color Tokens to map cleanly to Tailwind Utility classes */
+  --color-background-primary: var(--color-background-primary);
+  --color-background-secondary: var(--color-background-secondary);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-accent: var(--color-accent);
+  --color-border: var(--color-border);
+
+  --text-h1: var(--text-h1);
+  --text-h1--line-height: var(--text-h1-lh);
+
+  --text-h2: var(--text-h2);
+  --text-h2--line-height: var(--text-h2-lh);
+
+  --text-h3: var(--text-h3);
+  --text-h3--line-height: var(--text-h3-lh);
+
+  --text-h4: var(--text-h4);
+  --text-h4--line-height: var(--text-h4-lh);
+
+  --text-h5: var(--text-h5);
+  --text-h5--line-height: var(--text-h5-lh);
+
+  --text-h6: var(--text-h6);
+  --text-h6--line-height: var(--text-h6-lh);
+
+  --text-tagline: var(--text-tagline);
+  --text-tagline--line-height: var(--text-tagline-lh);
+
+  --text-large: var(--text-large);
+  --text-large--line-height: var(--text-large-lh);
+
+  --text-medium: var(--text-medium);
+  --text-medium--line-height: var(--text-medium-lh);
+
+  --text-regular: var(--text-regular);
+  --text-regular--line-height: var(--text-regular-lh);
+
+  --text-small: var(--text-small);
+  --text-small--line-height: var(--text-small-lh);
+
+  --text-tiny: var(--text-tiny);
+  --text-tiny--line-height: var(--text-tiny-lh);
+
+  /* Radius (Strict 8px scale) */
+  --radius-sm: 0.5rem;
+  /* 8px */
+  --radius-md: 1rem;
+  /* 16px */
+  --radius-lg: 1.5rem;
+  /* 24px */
+
+  /* Shadows (Strict 4px/8px scale layout mapping) */
+  --shadow-xxs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 4px 8px -2px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 8px 16px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 16px 24px -8px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 24px 32px -12px rgb(0 0 0 / 0.1);
+  --shadow-xxl: 0 32px 48px -16px rgb(0 0 0 / 0.1);
+}
+
+body {
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Material Symbols Outlined Default Styling */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "canvas": "^3.2.1",
+    "docx": "^9.5.3",
+    "jspdf": "^4.2.0",
+    "mammoth": "^1.11.0",
+    "next": "16.1.6",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^3.11.174",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/pdfjs-dist": "^2.10.377",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
